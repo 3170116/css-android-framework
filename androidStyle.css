@@ -1,0 +1,149 @@
+body {
+    padding: 0%;
+    margin: 0%;
+}
+
+/* FloatingRoundButton */
+.floating_round_button {
+    padding: 0em;
+    margin: 0em;
+    background-color: rgb(64, 64, 247);
+    box-shadow: 1px 1px 2px 1px #888888;
+    position: fixed;
+    bottom: 0.5em;
+    right: 1em;
+    border-radius: 5em;
+}
+
+.floating_round_button:hover {
+    cursor: pointer;
+    background-color: rgb(89, 89, 248);
+}
+
+.floating_round_button:active {
+    background-color: rgb(64, 64, 247);
+}
+
+.floating_round_button > i {
+    padding: 0.4em 0.4em 0.4em 0.4em;
+    font-size: 1.3em;
+    color: white;
+}
+
+/* Navigation Bar */
+.navigation_bar {
+    padding: 0em;
+    margin: 0em;
+    bottom: 0em;
+    width: 100%;
+    height: 3em;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(64, 64, 247);
+}
+
+.navigation_menu {
+    text-align: center;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
+
+.navigation_menu:hover {
+    background-color: rgb(97, 97, 245);
+    cursor: pointer;
+}
+
+.navigation_menu_active > h5 {
+    text-decoration: underline;
+}
+
+.navigation_menu:active {
+    background-color: rgb(64, 64, 247);
+}
+
+.navigation_menu > * {
+    padding: 0%;
+    margin: 0%;
+}
+
+.navigation_menu > i {
+    padding-top: 0.5em;
+}
+
+/* Toast message */
+.toast_container {
+    display: flex;
+    justify-content: center;
+}
+
+.toast {
+    color: white;
+    background-color: #888888;
+
+    font-weight: 1.1em;
+    border-radius: 0.4em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+
+    padding: 0.5em;
+    max-width: 18em;
+
+    position: absolute;
+    animation: pop_up_toast 0.25s ease-in;
+    bottom: 2.5em;
+}
+
+.toast:hover {
+    cursor: pointer;
+    background-color: #9e9d9d;
+}
+
+.toast:active {
+    display: none;
+}
+
+@keyframes pop_up_toast {
+    from {bottom: 2em; opacity: 0;}
+    to {bottom: 2.5em; opacity: 1;}
+}
+
+/* Drawable navigation menu */
+.navigation_drawable {
+    width: 40%;
+    animation: pop_up_drawable 0.3s ease-in;
+}
+
+.drawable_image > img {
+    width: 100%;
+    border-bottom: 1px solid #888888;
+    padding: 0em;
+}
+
+.drawable_group {
+    border-bottom: 1px solid #888888;
+}
+
+.drawable_group:last-child {
+    border-bottom: 0px;
+}
+
+.drawable_item {
+    padding: 1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+}
+
+.drawable_item_active {
+    text-decoration: underline;
+}
+
+.drawable_item:hover > * {
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+@keyframes pop_up_drawable {
+    from {transform: translate(-100%);}
+    to {transform: translate(0%);}
+}
